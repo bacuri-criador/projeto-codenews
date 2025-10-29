@@ -42,7 +42,3 @@ Este projeto é uma aplicação full-stack que integra um backend robusto com um
 
 * **Design e Prototipagem**
     * [cite_start]Figma (para prototipação de baixa, média ou alta fidelidade [cite: 57, 82])
-cd ../frontend
-npm install
-npm run dev
-# A aplicação estará disponível em http://localhost:5173 (ou outra porta indicada)
