@@ -5,39 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login | CodeNews - Sistema UBS</title>
 
-  <!-- Fonte  -->
+  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Arquivo CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="login.css">
 </head>
 <body>
   <div class="tela-login">
-    <div class="card-login">
-      <h1 class="titulo-login">CodeNews - Sistema UBS</h1>
-      <p class="descricao-login">Faça login para acessar o sistema</p>
+    <div class="lado-esquerdo"></div>
+    <div class="lado-direito">
+      <div class="card-login">
+        <h1 class="titulo-login">CodeNews - Sistema UBS</h1>
+        <p class="descricao-login">Por favor, faça login para acessar o painel.</p>
 
-      <form class="form-login">
-        <div class="grupo">
-          <label for="usuario">Usuário</label>
-          <input type="email" id="usuario" placeholder="joaovitor@codenews.com">
-        </div>
-
-        <div class="grupo">
-          <label for="senha">Senha</label>
-          <input type="password" id="senha" placeholder="••••••••">
-        </div>
-
-        <div class="acoes">
-          <div class="lembrar">
-            <input type="checkbox" id="lembrar">
-            <label for="lembrar">Lembrar-me</label>
+        <form class="form-login">
+          <div class="grupo">
+            <label for="usuario">USUÁRIO</label>
+            <input type="email" id="usuario" placeholder="joaovitor@codenews.com">
           </div>
-          <a href="#" class="esqueceu">Esqueceu sua senha?</a>
-        </div>
 
-        <button type="submit" class="botao-login">Entrar</button>
-      </form>
+          <div class="grupo">
+            <label for="senha">SENHA</label>
+            <input type="password" id="senha" placeholder="********">
+          </div>
+
+          <div class="acoes">
+            <div class="lembrar">
+              <input type="checkbox" id="lembrar">
+              <label for="lembrar">Lembrar-me</label>
+            </div>
+            <a href="#" class="esqueceu">Esqueceu sua senha?</a>
+          </div>
+
+          <button type="submit" class="botao-login">ENTRAR</button>
+        </form>
+      </div>
     </div>
   </div>
 </body>
