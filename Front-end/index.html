@@ -1,63 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="stilo.css">
-  <script src="https://kit.fontawesome.com/fe5ba7fa31.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem-vindo | CodeNews </title>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div class="pagina-login">
-    <a href="dashboard.html" class="botao-voltar">
-      <i class="fas fa-arrow-left"></i>
-      Voltar para Lista
-    </a>
-
-    <div class="cartao-login">
-      <div class="cabecalho-login">
-        <h1>
-          <i class="fas fa-sign-in-alt"></i>
-          Code News - Sistema UBS
-        </h1>
+  <div class="container">
+    <!-- Lado azul -->
+    <div class="lado-esquerdo">
+      <div class="conteudo-esquerdo animar-esquerda">
+        <div class="logo">
+          <div class="icone-logo">+</div>
+        </div>
+        <h1>CodeNews - Sistema UBS</h1>
+        <p>Bem-vindo(a) ao Sistema de Gerenciamento de Pacientes da UBS</p>
       </div>
+    </div>
 
-      <div class="corpo-login">
-        <form id="formularioLogin">
-          <div class="grupo-formulario">
-            <label for="email" class="rotulo-formulario">E-mail</label>
-            <div class="input-com-icone">
-              <span class="icone-input">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <input type="email" id="email" class="controle-formulario" placeholder="Digite seu e-mail" required>
-            </div>
-          </div>
-
-          <div class="grupo-formulario">
-            <label for="senha" class="rotulo-formulario">Senha</label>
-            <div class="input-com-icone">
-              <span class="icone-input">
-                <i class="fas fa-lock"></i>
-              </span>
-              <input type="password" id="senha" class="controle-formulario" placeholder="Digite sua senha" required>
-            </div>
-          </div>
-
-          <button type="submit" class="botao-login">
-            <i class="fas fa-sign-in-alt"></i>
-            Entrar
-          </button>
-        </form>
-      </div>
-
-      <div class="rodape-login">
-        <p>&copy; 2025 - Todos os direitos reservados.</p>
-        <p>Desenvolvido por Seminário Tech</p>
+    <!-- Lado direito -->
+    <div class="lado-direito">
+      <div class="conteudo-direito animar-direita">
+        <h2>Bem-vindo(a)</h2>
+        <a href="login.html" class="botao botao-primario">Entrar</a>
+        <a href="#sobre" class="botao botao-secundario">Sobre o Sistema</a>
       </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>

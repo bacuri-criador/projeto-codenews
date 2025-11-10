@@ -11,34 +11,23 @@ html, body {
   background-color: #fff;
 }
 
-/* ===== CONTAINER PRINCIPAL ===== */
+/* ===== LAYOUT BASE ===== */
 .tela-login {
   display: flex;
   height: 100vh;
   width: 100%;
+  position: relative;
   overflow: hidden;
 }
 
-/* ===== LADO ESQUERDO (AZUL + CURVA) ===== */
+/* ===== LADO ESQUERDO (AZUL) ===== */
 .lado-esquerdo {
   flex: 1;
   background: linear-gradient(135deg, #1b426b, #3180c2);
   position: relative;
 }
 
-.lado-esquerdo::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -120px;
-  width: 250px;
-  height: 100%;
-  background: #fff;
-  border-top-left-radius: 180px;
-  border-bottom-left-radius: 180px;
-}
-
-/* ===== LADO DIREITO ===== */
+/* ===== LADO DIREITO (FORMULÁRIO) ===== */
 .lado-direito {
   flex: 1;
   background: #ffffff;
@@ -46,7 +35,22 @@ html, body {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+
+/* ===== FAIXA DIAGONAL ===== */
+.tela-login::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 140%;
+  height: 220px;
+  background: #ffffff;
+  transform: translateX(-50%) rotate(-8deg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* ===== CARD LOGIN ===== */
@@ -57,6 +61,13 @@ html, body {
   width: 420px;
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.12);
   text-align: center;
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.card-login:hover {
+  transform: translateY(-3px);
 }
 
 /* ===== TÍTULOS ===== */
@@ -73,7 +84,7 @@ html, body {
   margin-bottom: 32px;
 }
 
-/* ===== FORMULÁRIO ===== */
+/* ===== FORM ===== */
 .grupo {
   text-align: left;
   margin-bottom: 20px;
@@ -146,7 +157,22 @@ html, body {
 }
 
 /* ===== RESPONSIVIDADE ===== */
-@media (max-width: 900px) {
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+  .tela-login::before {
+    transform: translateX(-50%) rotate(-7deg);
+    height: 180px;
+  }
+
+  .card-login {
+    width: 380px;
+    padding: 48px 50px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
   .tela-login {
     flex-direction: column;
   }
@@ -156,13 +182,43 @@ html, body {
   }
 
   .lado-direito {
+    flex: 1;
     background: linear-gradient(135deg, #1b426b, #3180c2);
+  }
+
+  .tela-login::before {
+    display: none;
   }
 
   .card-login {
     background: #fff;
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    border-radius: 24px;
+    padding: 40px 36px;
   }
 }
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .card-login {
+    width: 90%;
+    padding: 36px 28px;
+    border-radius: 20px;
+  }
+
+  .titulo-login {
+    font-size: 22px;
+  }
+
+  .descricao-login {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .botao-login {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+
