@@ -1,0 +1,132 @@
+/* RESET + FONT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ==== FUNDO GRADIENTE ==== */
+.tela-login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #002b5b, #0059b3);
+}
+
+/* ==== CARD ==== */
+.card-login {
+  background: #ffffff;
+  padding: 48px 56px;
+  border-radius: 20px;
+  box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.15);
+  width: 420px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card-login:hover {
+  transform: translateY(-3px);
+}
+
+/* ==== TÍTULOS ==== */
+.titulo-login {
+  font-size: 26px;
+  font-weight: 600;
+  color: #002b5b;
+  margin-bottom: 10px;
+}
+
+.descricao-login {
+  color: #777;
+  font-size: 15px;
+  margin-bottom: 35px;
+}
+
+/* ==== FORM ==== */
+.grupo {
+  text-align: left;
+  margin-bottom: 22px;
+}
+
+.grupo label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.grupo input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.grupo input:focus {
+  border-color: #0059b3;
+  box-shadow: 0 0 0 3px rgba(0, 89, 179, 0.1);
+}
+
+/* ==== AÇÕES (Checkbox + Link) ==== */
+.acoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  font-size: 14px;
+  color: #555;
+}
+
+.lembrar input {
+  accent-color: #0059b3;
+}
+
+.esqueceu {
+  text-decoration: none;
+  color: #0059b3;
+  font-weight: 500;
+}
+
+.esqueceu:hover {
+  text-decoration: underline;
+}
+
+/* ==== BOTÃO LOGIN ==== */
+.botao-login {
+  width: 100%;
+  background-color: #0059b3;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.botao-login:hover {
+  background-color: #004080;
+  transform: translateY(-1px);
+}
+
+/* ==== RESPONSIVIDADE ==== */
+@media (max-width: 480px) {
+  .card-login {
+    width: 90%;
+    padding: 36px 28px;
+  }
+
+  .titulo-login {
+    font-size: 22px;
+  }
+}

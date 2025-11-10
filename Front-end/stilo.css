@@ -1,7 +1,7 @@
 * { 
   box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
+  margin: 1; 
+  padding: 1; 
 }
 
 :root{
@@ -11,7 +11,7 @@
   --azul-muito-escuro: #0b1b33;
   --bg-cartao: #0f2a43;
   --destaque: #ffd84d;
-  --texto-claro: #ffffff;
+  --texto-claro: #0c0c0c;
   --texto-suave: #c7d0da;
   --emergencia: linear-gradient(135deg, #ff4757, #ff3838);
   --muito-urgente: linear-gradient(135deg, #ff9f1a, #ff7f00);
@@ -99,7 +99,7 @@ body{
 
 .cartao-login {
   background: white;
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 450px;
@@ -107,8 +107,8 @@ body{
 }
 
 .cabecalho-login {
-  background: linear-gradient(135deg, #2c3e50, #3498db);
-  color: white;
+  background: white;
+  color: whitesmoke;
   padding: 24px 30px;
   text-align: center;
 }
