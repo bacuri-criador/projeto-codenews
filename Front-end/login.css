@@ -84,7 +84,7 @@ html, body {
   margin-bottom: 32px;
 }
 
-/* ===== FORM ===== */
+/* ===== FORMULÁRIO ===== */
 .grupo {
   text-align: left;
   margin-bottom: 20px;
@@ -158,7 +158,7 @@ html, body {
 
 /* ===== RESPONSIVIDADE ===== */
 
-/* Tablets e telas médias */
+/* Tablets */
 @media (max-width: 1024px) {
   .tela-login::before {
     transform: translateX(-50%) rotate(-7deg);
