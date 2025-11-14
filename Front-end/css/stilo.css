@@ -317,15 +317,26 @@ body{
 .item-navegacao{
   display:flex;
   align-items:center;
-  gap:12px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  cursor:pointer;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
   color: var(--texto-claro);
   text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
-.item-navegacao:hover{ background: rgba(255,255,255,0.04); }
-.item-navegacao i{ width:22px; text-align:center; }
+.item-navegacao:hover {
+  background-color: var(--cor-primaria);
+  color: var(--texto-claro);
+}
+
+.item-navegacao i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.barra-lateral.recolhida .item-navegacao span {
+  display: none;
+}
 
 .barra-lateral.recolhida .texto-navegacao{ display:none; }
 .barra-lateral.recolhida .logo span{ display:none; }
