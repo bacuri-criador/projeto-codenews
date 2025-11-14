@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (sucesso) {
                 // Redireciona para a página principal (agora index.html)
-                window.location.href = 'index.html'; 
+                window.location.href = 'pag-inicial.html'; 
             } else {
                 alert('E-mail ou senha incorretos!');
             }
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- LÓGICA DO FORMULÁRIO DE EDIÇÃO (CORRIGIDO!) ---
+    // --- LÓGICA DO FORMULÁRIO DE EDIÇÃO ---
     if (document.getElementById('formularioEditarPaciente')) {
         const urlParams = new URLSearchParams(window.location.search);
         const id = parseInt(urlParams.get('id'));

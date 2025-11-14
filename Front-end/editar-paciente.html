@@ -98,73 +98,9 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const pacienteId = parseInt(urlParams.get('id'));
-      
-      if (!pacienteId) {
-        alert('ID do paciente não encontrado!');
-        window.location.href = 'painel-hospitalar.html';
-        return;
-      }
-      
-      const pacientes = JSON.parse(localStorage.getItem('pacientes')) || [];
-      const paciente = pacientes.find(p => p.id === pacienteId);
-      
-      if (!paciente) {
-        alert('Paciente não encontrado!');
-        window.location.href = 'painel-hospitalar.html';
-        return;
-      }
-      
-      document.getElementById('idPaciente').value = paciente.id;
-      document.getElementById('nome').value = paciente.nome;
-      document.getElementById('risco').value = paciente.risco;
-      document.getElementById('sala').value = paciente.sala;
-      document.getElementById('medico').value = paciente.medico;
-      document.getElementById('situacao').value = paciente.situacao;
-      
-      const dataHoraEntrada = new Date(paciente.dataHoraEntrada);
-      const dataFormatada = dataHoraEntrada.toISOString().slice(0, 16);
-      document.getElementById('dataHoraEntrada').value = dataFormatada;
-      
-      document.getElementById('formularioEditarPaciente').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const id = parseInt(document.getElementById('idPaciente').value);
-        const nome = document.getElementById('nome').value.trim();
-        const risco = document.getElementById('risco').value;
-        const sala = document.getElementById('sala').value.trim();
-        const medico = document.getElementById('medico').value;
-        const situacao = document.getElementById('situacao').value;
-        const dataHoraEntrada = document.getElementById('dataHoraEntrada').value;
-        
-        if (!nome || !risco || !sala || !medico || !situacao || !dataHoraEntrada) {
-          alert('Por favor preencha todos os campos obrigatórios.');
-          return;
-        }
-        
-        const pacientesAtualizados = pacientes.map(p => {
-          if (p.id === id) {
-            return {
-              ...p,
-              nome,
-              risco,
-              sala,
-              medico,
-              situacao,
-              dataHoraEntrada: new Date(dataHoraEntrada).toISOString()
-            };
-          }
-          return p;
-        });
-        
-        localStorage.setItem('pacientes', JSON.stringify(pacientesAtualizados));
-        alert('Paciente atualizado com sucesso!');
-        window.location.href = 'painel-hospitalar.html';
-      });
-    });
-  </script>
+  <script src="js/services/authService.js"></script>
+  <script src="js/services/atendimentoService.js"></script>
+  <script src="js/script.js"></script> </body>
+  
 </body>
 </html>
