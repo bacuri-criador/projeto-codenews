@@ -43,9 +43,9 @@ body{
 }
 
 .botao-voltar {
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  position: absolute; /* Mudei de 'fixed' para 'absolute' */
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
   z-index: 1000;
   background: linear-gradient(135deg, #2c3e50, #3498db);
   color: white;
@@ -229,10 +229,18 @@ body{
   align-items:center;
   gap:16px;
   padding: 0 20px;
-  background: linear-gradient(90deg, var(--azul-escuro), var(--azul-medio));
+  background: linear-gradient(135deg, #34495e, #2c3e50);
   color: var(--texto-claro);
   box-shadow: 0 2px 8px rgba(10,20,30,0.15);
+  margin-left: 250px; /* ADICIONE ESTA LINHA */
+  transition: margin-left 0.3s ease; /* ADICIONE ESTA LINHA */
 }
+
+.barra-superior.sem-barra-lateral {
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+
 
 .barra-superior .logo {
   display:flex;
@@ -240,9 +248,16 @@ body{
   gap:10px;
   font-weight:700;
   font-size:1.05rem;
+  margin-left: 20px;
 }
 
-.container-app{ display:flex; gap:20px; padding: 20px; }
+.container-app {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  margin-left: 250px; /* Largura inicial da barra lateral */
+  transition: margin-left 0.3s ease; /* ADICIONE ESTA LINHA - sincroniza com a transição da barra */
+}
 
 .barra-lateral{
   width: 250px;
@@ -341,6 +356,24 @@ body{
 .barra-lateral.recolhida .texto-navegacao{ display:none; }
 .barra-lateral.recolhida .logo span{ display:none; }
 .barra-lateral.recolhida .info-usuario{ display:none; }
+
+.barra-lateral.recolhida ~ .container-app {
+  margin-left: 80px; 
+}
+
+
+body.barra-recolhida .container-app {
+  margin-left: 80px; 
+}
+
+body.barra-recolhida .barra-superior {
+  margin-left: 80px; 
+}
+
+body.barra-recolhida footer {
+  width: calc(100% - 80px);
+  left: 80px;
+}
 
 .principal{
   flex:1;
@@ -494,7 +527,7 @@ body{
   cursor:pointer;
 }
 .btn.primary{
-  background: linear-gradient(90deg, var(--azul-escuro), var(--azul-medio));
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
   color: white;
 }
 .btn.ghost{
@@ -1191,23 +1224,36 @@ body{
   transform: scale(1.02);
 }
 
+/* FOOTER PADRÃO (para páginas COM barra lateral - dashboard) */
 footer {
   background: linear-gradient(135deg, #2c3e50, #3498db);
   color: white;
   font-size: 14px;
   text-align: center;
   padding: 15px 20px;
-  width: 100%;
+  width: calc(100% - 250px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 250px;
+  margin-left: 0;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+footer.footer-largura-total {
+  width: 100% !important;
+  left: 0 !important;
+  position: relative !important;
   margin-top: 40px;
 }
 
 footer p {
   margin: 0;
+  margin-left: 20px;
 }
 
 .pagina-politica, .pagina-termos {
@@ -1335,8 +1381,8 @@ footer p {
 }
 
 .btn-ghost {
-  background: transparent;
-  color: var(--texto-claro);
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: #fefeff;
   border: 1px solid rgba(255,255,255,0.2);
   padding: 8px 12px;
   border-radius: 6px;
