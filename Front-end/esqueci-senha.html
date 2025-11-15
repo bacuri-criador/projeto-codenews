@@ -1,58 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recuperar Senha</title>
+  <title>Recuperar Senha | CodeNews</title>
+
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/stilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/fe5ba7fa31.js" crossorigin="anonymous"></script>
 </head>
-<body>
-  <div class="pagina-login">
-    <a href="login.html" class="botao-voltar">
-      <i class="fas fa-arrow-left"></i>
-      Voltar para o Login
-    </a>
 
-    <div class="cartao-login">
-      <div class="cabecalho-login">
-        <h1>
-          <i class="fas fa-question-circle"></i>
-          Esqueceu a Senha?
-        </h1>
-      </div>
+<body class="pagina-recuperar">
 
-      <div class="corpo-login">
-        <p style="text-align: center; margin-bottom: 20px; color: #555;">
-          Não se preocupe. Digite seu e-mail e enviaremos um link para redefinir sua senha.
-        </p>
-        <form id="formularioEsqueciSenha">
-          <div class="grupo-formulario">
-            <label for="email" class="rotulo-formulario">E-mail</label>
-            <div class="input-com-icone">
-              <span class="icone-input">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <input type="email" id="email" class="controle-formulario" placeholder="Digite seu e-mail" required>
-            </div>
-          </div>
+  <a href="login.html" class="botao-voltar">
+    <i class="fas fa-arrow-left"></i> Voltar
+  </a>
 
-          <button type="submit" class="botao-login">
-            <i class="fas fa-paper-plane"></i>
-            Enviar Link
-          </button>
-        </form>
-      </div>
+  <div class="cartao-recuperar">
 
-      <div class="rodape-login">
-        <p>&copy; 2025 - Todos os direitos reservados.</p>
-        <p>Desenvolvido por Seminário Tech</p>
-      </div>
-    </div>
+    <h1 class="titulo-recuperar">
+      <i class="fas fa-question-circle"></i> Recuperar Senha
+    </h1>
+
+    <p class="texto-recuperar">
+      Digite seu e-mail e enviaremos um link de redefinição.
+    </p>
+
+    <form id="formularioEsqueciSenha" class="form-recuperar">
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" class="input-padrao" required placeholder="email@exemplo.com">
+
+      <button class="btn-primario btn-full" type="submit">
+        <i class="fas fa-paper-plane"></i> Enviar Link
+      </button>
+    </form>
+
+    <footer class="rodape-recuperar">
+      <p>© 2025 - Seminário Tech</p>
+    </footer>
+
   </div>
 
-  <script src="js/services/authService.js"></script>
-  <script src="js/services/atendimentoService.js"></script>
-  <script src="js/app.js"></script>
 </body>
 </html>

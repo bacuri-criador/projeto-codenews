@@ -1,101 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Painel Hospitalar - Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/fe5ba7fa31.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard | CodeNews</title>
+
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/stilo.css">
+  <script src="https://kit.fontawesome.com/fe5ba7fa31.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="barra-superior">
-    <div class="logo">
-      <div class="icone-logo">
-        <i class="fas fa-code"></i>
-      </div>
-      <span>Code News</span>
+
+  <header class="barra-superior-unificada">
+    <div class="logo-unificada">
+      <div class="icone-logo">cN</div>
+      CodeNews
     </div>
-    <div class="acoes-cabecalho">
-      <a class="btn btn-ghost" href="historico.html"><i class="fas fa-history"></i> Histórico</a>
+
+    <nav class="menu-unificado">
+      <a href="pagina-inicial.html">Início</a>
+      <a href="painel-hospitalar.html">Pacientes</a>
+      <a class="ativo" href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="usuario-unificada">
+      <div class="avatar-unificada">cN</div>
+      <a href="index.html">Sair</a>
     </div>
-  </div>
+  </header>
 
-  <div class="container-app">
-    <aside class="barra-lateral" id="barraLateral">
-      <div class="cabecalho-barra-lateral">
-        <div class="logo">
-          <div class="icone-logo-grande">
-            <i class="fas fa-hospital"></i>
-          </div>
-          <span class="texto-logo">Painel</span>
-        </div>
-        <button class="botao-toggle" title="Abrir / Fechar"><i class="fas fa-bars"></i></button>
+  <main class="container-centro">
+    <div class="cabecalho-flex">
+      <h2>Painel Geral</h2>
+      <div>
+        <button class="btn-primario" onclick="location.href='cadastro-paciente.html'"><i class="fas fa-user-plus"></i> Novo</button>
       </div>
+    </div>
 
-      <div class="lista-navegacao">
-        <a class="item-navegacao" href="dashboard.html"><i class="fas fa-home"></i><span class="texto-navegacao">Início</span></a>
-        <a class="item-navegacao" href="index.html"><i class="fas fa-sign-in-alt"></i><span class="texto-navegacao">Login</span></a>
-        <a class="item-navegacao" href="sobre.html"><i class="fas fa-info-circle"></i><span class="texto-navegacao">Sobre Nós</span></a>
-        <a class="item-navegacao" href="historico.html"><i class="fas fa-history"></i><span class="texto-navegacao">Histórico</span></a>
-      </div>
-    </aside>
+    <section class="grid-dashboard">
+      <article class="cartao-dashboard risco">
+        <div class="texto-pequeno">CLASSIFICAÇÃO DE RISCO</div>
+        <div class="texto-risco" id="textoRisco">-</div>
+        <div class="emblema">!</div>
+      </article>
 
-    <main class="principal">
-      <div class="grade" id="gradeDashboard">
-        <div class="cartao risco" id="cartaoRisco">
-          <div>
-            <div class="texto-pequeno">CLASSIFICAÇÃO DE RISCO</div>
-            <div class="texto-risco" id="textoRisco">-</div>
-          </div>
-          <div class="emblema" id="emblemaRisco">!</div>
-        </div>
+      <article class="cartao-dashboard espera">
+        <div class="texto-pequeno">TEMPO DE ESPERA MÉDIO</div>
+        <div class="tempo" id="tempoEsperaMedio">-</div>
+      </article>
 
-        <div class="cartao espera" id="cartaoEspera">
-          <div>
-            <div class="texto-pequeno">TEMPO DE ESPERA MÉDIO</div>
-            <div class="tempo" id="tempoEsperaMedio">-</div>
-          </div>
-        </div>
+      <article class="cartao-dashboard paciente-grande">
+        <div class="texto-pequeno">PACIENTE EM ATENDIMENTO</div>
+        <div class="nome" id="nomePaciente">-</div>
+        <div class="info" id="infoPaciente">Sala - Médico - Entrada</div>
+      </article>
 
-        <div class="cartao paciente-grande" id="pacienteGrande">
-          <div class="texto-pequeno">PACIENTE EM ATENDIMENTO</div>
-          <div class="nome" id="nomePaciente">-</div>
-          <div class="texto-pequeno" id="infoPaciente">Sala - Médico - Entrada</div>
-        </div>
+      <article class="cartao-dashboard total">
+        <div class="texto-pequeno">TOTAL DE ATENDIMENTOS DO DIA</div>
+        <div class="contador" id="contadorTotal">0</div>
+      </article>
 
-        <div class="cartao total" id="cartaoTotal">
-          <div>
-            <div class="texto-pequeno">TOTAL DE ATENDIMENTOS DO DIA</div>
-            <div class="contador" id="contadorTotal">0</div>
-          </div>
-          <div class="info-visualizacao">
-            <div class="texto-pequeno">VISUALIZAÇÃO</div>
-            <div class="texto-destaque">Próximos atendimentos</div>
-          </div>
-        </div>
+      <article class="cartao-dashboard proximos">
+        <div class="texto-pequeno">PRÓXIMOS PACIENTES</div>
+        <div id="listaProximos"></div>
+      </article>
+    </section>
 
-        <div class="cartao proximos-pacientes">
-          <div class="texto-pequeno">PRÓXIMOS PACIENTES</div>
-          <div id="listaProximos"></div>
-        </div>
-      </div>
-
-      <div class="container-carrossel">
-        <div class="conteudo-carrossel"></div>
-      </div>
-    </main>
-  </div>
-
-   <footer>
-    <p>&copy; 2025 - Todos os direitos reservados.</p>
-    <p>Desenvolvido por Seminário Tech</p>
-  </footer>
-
+  </main>
 
   <script src="js/services/authService.js"></script>
   <script src="js/services/atendimentoService.js"></script>
   <script src="js/script.js"></script>
-
 </body>
 </html>

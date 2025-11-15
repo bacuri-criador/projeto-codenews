@@ -1,91 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termos de Uso</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Termos de Uso | CodeNews</title>
+
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/stilo.css">
   <script src="https://kit.fontawesome.com/fe5ba7fa31.js" crossorigin="anonymous"></script>
 </head>
-<body class="pagina-termos">
-  <div class="container-app">
-    <div class="barra-lateral" id="barraLateral">
-      <div class="cabecalho-barra-lateral">
-        <div class="logo">
-          <div class="icone-logo-grande">
-            <i class="fas fa-hospital"></i>
-          </div>
-          <span class="texto-logo">Painel</span>
-        </div>
-        <button class="botao-toggle" title="Abrir / Fechar"><i class="fas fa-bars"></i></button>
-      </div>
+<body>
 
-      <div class="lista-navegacao">
-        <a class="item-navegacao" href="dashboard.html"><i class="fas fa-home"></i><span class="texto-navegacao">Início</span></a>
-        <a class="item-navegacao" href="index.html"><i class="fas fa-sign-in-alt"></i><span class="texto-navegacao">Login</span></a>
-        <a class="item-navegacao" href="sobre.html"><i class="fas fa-info-circle"></i><span class="texto-navegacao">Sobre Nós</span></a>
-        <a class="item-navegacao" href="politica-privacidade.html"><i class="fas fa-shield-alt"></i><span class="texto-navegacao">Política</span></a>
-        <a class="item-navegacao active" href="termos-uso.html"><i class="fas fa-file-contract"></i><span class="texto-navegacao">Termos</span></a>
-      </div>
+  <header class="barra-superior-unificada">
+    <div class="logo-unificada">
+      <div class="icone-logo">cN</div>
+      CodeNews
     </div>
 
-    <div class="principal">
-      <a href="dashboard.html" class="botao-voltar">
-        <i class="fas fa-arrow-left"></i>
-        Voltar
-      </a>
+    <nav class="menu-unificado">
+      <a href="pagina-inicial.html">Início</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a class="ativo" href="termos-uso.html">Termos</a>
+    </nav>
 
-      <div class="container-termos">
-        <div class="cabecalho-termos">
-          <h1>TERMOS DE USO</h1>
-          <p>Condições para utilização do sistema</p>
-        </div>
-        
-        <div class="conteudo-termos">
-          <div class="secao-termos">
-            <h2>1. Aceitação dos termos</h2>
-            <p>Ao acessar e utilizar o Sistema de Gerenciamento da UBS, o usuário declara estar ciente e de acordo com estes Termos de Uso e com a Política de Privacidade correspondente.</p>
-          </div>
-          
-          <div class="secao-termos">
-            <h2>2. Responsabilidade do usuário</h2>
-            <p>O usuário compromete-se a:</p>
-            <ul>
-              <li>Fornecer informações verdadeiras e atualizadas;</li>
-              <li>Utilizar o sistema apenas para fins legítimos relacionados aos serviços de saúde;</li>
-              <li>Não compartilhar suas credenciais de acesso com terceiros.</li>
-            </ul>
-          </div>
-          
-          <div class="secao-termos">
-            <h2>3. Responsabilidade da UBS</h2>
-            <p>A UBS se compromete a:</p>
-            <ul>
-              <li>Proteger a privacidade e os dados pessoais dos usuários;</li>
-              <li>Manter o sistema em conformidade com as leis brasileiras;</li>
-              <li>Notificar os usuários em caso de incidentes de segurança que envolvam seus dados.</li>
-            </ul>
-          </div>
-          
-          <div class="secao-termos">
-            <h2>4. Propriedade intelectual</h2>
-            <p>Todo o conteúdo e estrutura do sistema são de propriedade exclusiva da Code News/UBS e não podem ser reproduzidos, modificados ou distribuídos sem autorização prévia.</p>
-          </div>
-          
-          <div class="secao-termos">
-            <h2>5. Foro e legislação aplicável</h2>
-            <p>Este documento é regido pelas leis da República Federativa do Brasil.</p>
-            <p>Fica eleito o foro da comarca de Palmas - TO como competente para dirimir quaisquer controvérsias decorrentes destes Termos.</p>
-          </div>
-        </div>
+    <div class="usuario-unificado">
+      <div class="avatar-unificada">cN</div>
+      <a href="index.html">Sair</a>
+    </div>
+  </header>
+
+  <main class="container-centro">
+    <div class="cartao-formulario">
+      <div class="cabecalho-formulario">
+        <i class="fas fa-file-contract"></i> Termos de Uso
+      </div>
+
+      <div class="conteudo-termos">
+        <section class="secao-termos">
+          <h4>1. Aceitação</h4>
+          <p>Ao usar o sistema CodeNews, você aceita estes termos e a política de privacidade.</p>
+        </section> <br>
+
+        <section class="secao-termos">
+          <h4>2. Responsabilidades</h4>
+          <p>Usuários devem manter credenciais seguras e utilizar o sistema conforme regras internas.</p>
+        </section> <br>
+
+        <section class="secao-termos">
+          <h4>3. Propriedade intelectual</h4>
+          <p>Conteúdos do sistema são de propriedade da equipe CodeNews e não podem ser reproduzidos sem autorização.</p>
+        </section> <br>
+
+        <section class="secao-termos">
+          <h4>4. Foro</h4>
+          <p>Foro escolhido: Palmas - TO.</p>
+        </section> <br>
+
       </div>
     </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 - Todos os direitos reservados.</p>
-    <p>Desenvolvido por Seminário Tech</p>
-  </footer>
+  </main>
 
   <script src="js/services/authService.js"></script>
   <script src="js/services/atendimentoService.js"></script>

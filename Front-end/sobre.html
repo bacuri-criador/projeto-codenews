@@ -1,82 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Nossa Equipe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sobre | CodeNews</title>
+
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/stilo.css">
   <script src="https://kit.fontawesome.com/fe5ba7fa31.js" crossorigin="anonymous"></script>
 </head>
-<body class="pagina-sobre">
-  <a href="dashboard.html" class="botao-voltar">
-    <i class="fas fa-arrow-left"></i>
-    Voltar
-  </a>
+<body>
 
-  <div class="barra-superior sem-barra-lateral">
-    <div class="logo">
-      <div class="icone-logo">
-        <i class="fas fa-code"></i>
-      </div>
-      <span>Code News</span>
+  <header class="barra-superior-unificada">
+    <div class="logo-unificada">
+      <div class="icone-logo">cN</div>
+      CodeNews
     </div>
-  </div>
 
-  <div class="container-sobre-completo">
-    <div class="cabecalho-sobre">
-      <h1>SOBRE NÓS</h1>
-      <p>Conheça nossa equipe de profissionais qualificados</p>
-      
-      <div class="circulos-sobre">
-        <div class="circulo circulo-superior-esquerdo"></div>
-        <div class="circulo circulo-superior-direito"></div>
-        <div class="circulo circulo-inferior-esquerdo"></div>
-        <div class="circulo circulo-inferior-direito"></div>
-      </div>
-    </div>
-    
-    <div class="grade-equipe">
-      <div class="membro-equipe">
-        <div class="foto-membro">
-          <span>Foto</span>
-        </div>
-        <h3 class="nome-membro">João Vitor</h3>
-        <p class="info-membro">Acadêmico do curso Tecnólogo em Análise em Desenvolvimento de Sistemas - Unitins</p>
-       
-      </div>
-      
-      <div class="membro-equipe">
-        <div class="foto-membro">
-          <span>Foto</span>
-        </div>
-        <h3 class="nome-membro">Andressa</h3>
-        <p class="info-membro">Acadêmico do curso Tecnólogo em Análise em Desenvolvimento de Sistemas - Unitins</p>
-       
-      </div>
-      
-      <div class="membro-equipe">
-        <div class="foto-membro">
-          <span>Foto</span>
-        </div>
-        <h3 class="nome-membro">Rizia</h3>
-        <p class="info-membro">Acadêmico do curso Tecnólogo em Análise em Desenvolvimento de Sistemas - Unitins</p>
-       
-      </div>
-      
-      <div class="membro-equipe">
-        <div class="foto-membro">
-          <span><img src="imagens/Danilo.jpg" alt="Danilo"></span>
-        </div>
-        <h3 class="nome-membro">Danilo</h3>
-        <p class="info-membro">Acadêmico do curso Tecnólogo em Análise em Desenvolvimento de Sistemas - Unitins</p>
-       
-      </div>
-    </div>
-  </div>
+    <nav class="menu-unificado">
+      <a href="pagina-inicial.html">Início</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a class="ativo" href="sobre.html">Sobre</a>
+    </nav>
 
-  <footer class="footer-largura-total">
-    <p>&copy; 2025 - Todos os direitos reservados.</p>
-    <p>Desenvolvido por Seminário Tech</p>
-  </footer>
+    <div class="usuario-unificado">
+      <div class="avatar-unificada">cN</div>
+      <a href="index.html">Sair</a>
+    </div>
+  </header>
+
+  <main class="container-centro">
+    <div class="cartao-formulario">
+      <div class="cabecalho-formulario"><i class="fas fa-info-circle"></i> Sobre Nós</div>
+
+      <div class="conteudo-sobre">
+        <p> O CodeNews é um projeto de seminário acadêmico que busca criar um sistema de gestão de filas e atendimentos para unidades básicas de saúde, focado em transparência, privacidade e usabilidade.</p> <br>
+
+       <h4>Nossa equipe:</h4>
+
+<div class="grade-equipe">
+
+    <div class="membro">
+        <div class="foto-membro">
+            <img src="imagens/João Vitor.jpg" alt="João Vitor" style="max-width:100%;border-radius:8px">
+        </div>
+        <h5>João Vitor</h5>
+        <p>Acadêmico - Desenvolvimento de Sistemas</p>
+    </div>
+
+    <div class="membro">
+        <div class="foto-membro">
+            <img src="imagens/Andressa.jpg" alt="Andressa" style="max-width:100%;border-radius:8px">
+        </div>
+        <h5>Andressa</h5>
+        <p>Acadêmica - Desenvolvimento de Sistemas</p>
+    </div>
+
+    <div class="membro">
+        <div class="foto-membro">
+            <img src="imagens/Rizia.jpg" alt="Rizia" style="max-width:100%;border-radius:8px">
+        </div>
+        <h5>Rizia</h5>
+        <p>Acadêmica - Desenvolvimento de Sistemas</p>
+    </div>
+
+    <div class="membro">
+        <div class="foto-membro">
+            <img src="imagens/Danilo.jpg" alt="Danilo" style="max-width:100%;border-radius:8px">
+        </div>
+        <h5>Danilo</h5>
+        <p>Acadêmico - Desenvolvimento de Sistemas</p>
+    </div>
+
+</div>
+        </div>
+        </div>
+  </main>
+
+  <script src="js/services/authService.js"></script>
+  <script src="js/services/atendimentoService.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
