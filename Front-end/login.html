@@ -24,26 +24,27 @@
         <p class="descricao-login">Por favor, faça login para acessar o painel.</p>
 
         <form class="form-login" id="formularioLogin">
-          <div class="grupo">
-            <label for="usuario">USUÁRIO</label>
-            <input type="email" id="email" placeholder="joaovitor@codenews.com" required>
-          </div>
+  <div class="grupo">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="usuario@codenews.com" required>
+  </div>
 
-          <div class="grupo">
-            <label for="senha">SENHA</label>
-            <input type="password" id="senha" placeholder="********">
-          </div>
+  <div class="grupo">
+    <label for="senha">Senha</label>
+    <input type="password" id="senha" name="senha" placeholder="********" required>
+  </div>
 
-          <div class="acoes">
-            <div class="lembrar">
-              <input type="checkbox" id="lembrar">
-              <label for="lembrar">Lembrar-me</label>
-            </div>
-            <a href="esqueci-senha.html" class="esqueceu">Esqueceu sua senha?</a>
-          </div>
+  <div class="acoes">
+    <label class="lembrar">
+      <input type="checkbox" id="lembrar" name="lembrar">
+      Lembrar-me
+    </label>
+    <a href="esqueci-senha.html" class="esqueceu">Esqueceu sua senha?</a>
+  </div>
 
-          <button type="submit" class="botao-login">ENTRAR</button>
-        </form>
+  <button type="submit" class="botao-login">Entrar</button>
+</form>
+
       </div>
     </div>
   </div>
