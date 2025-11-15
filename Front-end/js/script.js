@@ -438,13 +438,18 @@ function inicializarToggleBarraLateral(){
   if(!barraLateral || !botaoToggle) return;
 
   const recolhida = localStorage.getItem('barra-lateral-recolhida') === 'true';
-  if(recolhida) barraLateral.classList.add('recolhida');
+  if(recolhida) {
+    barraLateral.classList.add('recolhida');
+    document.body.classList.add('barra-recolhida'); // Garanta que o body também tenha a classe
+  }
 
   botaoToggle.addEventListener('click', ()=> {
     barraLateral.classList.toggle('recolhida');
+    document.body.classList.toggle('barra-recolhida'); // Também altera a classe no body
     localStorage.setItem('barra-lateral-recolhida', barraLateral.classList.contains('recolhida'));
   });
 }
+
 
 function inicializarCarrossel(){
   const elementoCarrossel = document.querySelector('.conteudo-carrossel');
