@@ -1,6 +1,6 @@
-package com.codenews.repository;
+package com.codenews.backend.repository;
 
-import com.codenews.model.Usuario;
+import com.codenews.backend.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.codenews.model;
+package com.codenews.backend.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -11,6 +11,8 @@ public class Atendimento {
     private Long id;
     
     private String nome;
+    private String cpf;
+    private String idade;
     private String risco;
     private String sala;
     private String medico;
@@ -33,6 +35,14 @@ public class Atendimento {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public String getCpf() { return cpf; }
+
+    public void setCpf(String cpf) { this.cpf = cpf; }
+
+    public String getIdade() { return idade; }
+
+    public void setIdade(String idade) { this.idade = idade; }
 
     public String getRisco() {
         return risco;

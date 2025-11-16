@@ -4,50 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Histórico | CodeNews</title>
-
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/stilo.css">
   <script src="https://kit.fontawesome.com/fe5ba7fa31.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
-  <div class="barra-superior-unificada">
+  <header class="barra-superior-unificada">
     <div class="logo-unificada">
       <div class="icone-logo">cN</div>
       CodeNews
     </div>
-
     <nav class="menu-unificado">
       <a href="pag-inicial.html">Início</a>
+      <a href="painel-hospitalar.html">Pacientes</a>
       <a class="ativo" href="historico.html">Histórico</a>
-      <a href="#">Perfil</a>
     </nav>
-
     <div class="usuario-unificado">
       <div class="avatar-unificado">cN</div>
       <a href="index.html">Sair</a>
     </div>
-  </div>
+  </header>
 
-  <div class="container-centro">
-    <h2>Histórico de Navegação</h2>
+  <main class="container-centro conteudo-painel">
+    <div class="cabecalho-flex">
+      <h2>Histórico de Pacientes (Finalizados)</h2>
+      <button id="botaoLimpar" class="btn-perigo">
+        <i class="fas fa-trash"></i> Limpar Histórico
+      </button>
+    </div>
 
     <div class="tabela-container">
       <table class="tabela-padrao">
         <thead>
           <tr>
-            <th>Data</th>
-            <th>Página</th>
-            <th>Ação</th>
+            <th>Nome</th>
+            <th>Risco</th>
+            <th>Sala</th>
+            <th>Médico</th>
+            <th>Situação</th>
+            <th>Data / Hora</th>
           </tr>
         </thead>
-        <tbody id="tabelaHistorico"></tbody>
+        <tbody id="tabelaHistorico">
+          </tbody>
       </table>
     </div>
+  </main>
 
-    <button id="botaoLimpar" class="btn-perigo">Limpar Histórico</button>
-  </div>
-
+  <script src="js/services/authService.js"></script>
+  <script src="js/services/atendimentoService.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

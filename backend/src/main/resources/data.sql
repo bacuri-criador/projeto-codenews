@@ -1,6 +1,6 @@
 -- Nosso usuário de teste para o login
 INSERT INTO usuario (id, login, senha, nome_completo) 
-VALUES (1, 'admin@codenews.com', '123456', 'Administrador do Sistema');
+VALUES (1, 'admin@codenews.com', '12345678', 'Administrador do Sistema');
 
 -- Alguns atendimentos iniciais (copiados do seu script.js)
 INSERT INTO atendimento (nome, risco, sala, medico, situacao, data_hora_entrada) 

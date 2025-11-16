@@ -1,7 +1,7 @@
-package com.codenews.controller;
+package com.codenews.backend.controller;
 
-import com.codenews.model.Atendimento;
-import com.codenews.service.AtendimentoService;
+import com.codenews.backend.model.Atendimento;
+import com.codenews.backend.service.AtendimentoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

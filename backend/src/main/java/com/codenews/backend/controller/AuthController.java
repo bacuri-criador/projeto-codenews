@@ -1,7 +1,7 @@
-package com.codenews.controller;
+package com.codenews.backend.controller;
 
-import com.codenews.dto.LoginRequest;
-import com.codenews.service.AuthService;
+import com.codenews.backend.dto.LoginRequest;
+import com.codenews.backend.service.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
