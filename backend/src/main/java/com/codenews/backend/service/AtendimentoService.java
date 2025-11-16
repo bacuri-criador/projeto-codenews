@@ -1,7 +1,7 @@
-package com.codenews.service;
+package com.codenews.backend.service;
 
-import com.codenews.model.Atendimento;
-import com.codenews.repository.AtendimentoRepository;
+import com.codenews.backend.model.Atendimento;
+import com.codenews.backend.repository.AtendimentoRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;

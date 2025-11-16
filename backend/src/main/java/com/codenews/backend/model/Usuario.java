@@ -1,4 +1,4 @@
-package com.codenews.model;
+package com.codenews.backend.model;
 
 import jakarta.persistence.*;
 

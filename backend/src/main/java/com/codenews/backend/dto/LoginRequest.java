@@ -1,4 +1,4 @@
-package com.codenews.dto;
+package com.codenews.backend.dto;
 
 import jakarta.validation.constraints.NotBlank;
 

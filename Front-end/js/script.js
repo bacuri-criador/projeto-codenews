@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const novoAtendimento = {
                 nome: document.getElementById('nome').value.trim(),
+                cpf: document.getElementById('cpf').value.trim(),
+                idade: document.getElementById('idade').value,
                 risco: document.getElementById('risco').value,
                 sala: document.getElementById('sala').value.trim(),
                 medico: document.getElementById('medico').value.trim(),
