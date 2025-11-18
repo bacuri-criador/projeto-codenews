@@ -5,9 +5,12 @@ import com.codenews.backend.service.AtendimentoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin(origins = {"http://localhost:5500"})
 @RestController
 @RequestMapping("/api/atendimentos")
 public class AtendimentoController {

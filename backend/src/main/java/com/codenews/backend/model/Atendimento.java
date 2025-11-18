@@ -1,25 +1,42 @@
 package com.codenews.backend.model;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "atendimento")
 public class Atendimento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     private String nome;
+
+    // Campos opcionais, pois o front não envia
     private String cpf;
     private Integer idade;
+
     private String risco;
     private String sala;
     private String medico;
     private String situacao;
+
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime dataHoraEntrada;
 
-    // Getters e Setters
+    public Atendimento() {}
+
+    @PrePersist
+    public void prePersist() {
+        if (dataHoraEntrada == null) {
+            dataHoraEntrada = LocalDateTime.now();
+        }
+    }
+
+    // GETTERS E SETTERS
     public Long getId() {
         return id;
     }
