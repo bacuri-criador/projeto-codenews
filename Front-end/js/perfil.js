@@ -90,3 +90,19 @@ async function salvarPerfil() {
         alert("Erro ao atualizar perfil.");
     }
 }
+
+window.onload = function () {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user) {
+        window.location.href = "login.html";
+        return;
+    }
+
+    document.getElementById("perfil-nome").innerText = user.nome;
+    document.getElementById("perfil-email").innerText = user.email;
+    document.getElementById("perfil-cargo").innerText = user.cargo;
+
+    const foto = document.getElementById("perfil-foto");
+    if (foto) foto.src = user.fotoUrl;
+};

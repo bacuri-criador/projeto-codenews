@@ -1,63 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login | CodeNews - Sistema UBS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | CodeNews</title>
 
-  <!-- Fonte -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
 
   <div class="tela-login">
-    <!-- Lado esquerdo -->
+
     <div class="lado-esquerdo"></div>
 
-    <!-- Lado direito (card de login) -->
     <div class="lado-direito">
+
       <div class="card-login">
+
         <h1 class="titulo-login">CodeNews - Sistema UBS</h1>
         <p class="descricao-login">Por favor, faça login para acessar o painel.</p>
 
-        <form class="form-login" id="formularioLogin">
+        <form class="form-login" id="formularioLogin" onsubmit="login(event)">
 
-  <div class="grupo">
-    <label for="email">Email</label>
-    <input id="email" type="email" placeholder="Email">
-  </div>
-  <div class="grupo">
-    <label for="senha">Senha</label>  
-    <input id="senha" type="password" placeholder="Senha">
-  
+          <div class="grupo">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" placeholder="usuario@codenews.com" required>
+          </div>
 
+          <div class="grupo">
+            <label for="senha">Senha</label>
+            <input id="senha" type="password" placeholder="**********" required>
+          </div>
 
+          <div class="acoes">
+            <label class="lembrar">
+              <input type="checkbox" id="lembrar"> Lembrar-me
+            </label>
+            <a href="esqueci-senha.html" class="esqueceu">Esqueceu sua senha?</a>
+          </div>
 
-  </div>
+          <button type="submit" class="botao-login">Entrar</button>
 
-  <div class="acoes">
-    <label class="lembrar">
-      <input type="checkbox" id="lembrar" name="lembrar">
-      Lembrar-me
-    </label>
-    <a href="esqueci-senha.html" class="esqueceu">Esqueceu sua senha?</a>
-  </div>
-
-  <button onclick="login()" class="botao-login">Entrar</button>
-</form>
+        </form>
 
       </div>
     </div>
+
   </div>
 
-  <script src="js/services/authService.js"></script>
-<script src="js/services/atendimentoService.js"></script>
-<script src="js/script.js"></script>
-<script src="js/login.js"></script>
+  <script src="js/mock-users.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>
-
-

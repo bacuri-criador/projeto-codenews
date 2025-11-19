@@ -1,25 +1,16 @@
-async function login() {
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
+function login(event) {
+    event.preventDefault();
 
-    const response = await fetch("http://localhost:8080/login", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({ email, senha })
-    });
+    const email = document.getElementById("email").value.trim();
+    const senha = document.getElementById("senha").value.trim();
 
-    if (!response.ok) {
+    const user = mockUsers.find(u => u.email === email && u.senha === senha);
+
+    if (!user) {
         alert("Email ou senha incorretos!");
         return;
     }
 
-    const usuario = await response.json();
-
-    // salva ID e dados no navegador
-    localStorage.setItem("userId", usuario.id);
-    localStorage.setItem("nome", usuario.nome);
-    localStorage.setItem("email", usuario.email);
-
-    // redireciona após login
+    localStorage.setItem("user", JSON.stringify(user));
     window.location.href = "pag-inicial.html";
 }
