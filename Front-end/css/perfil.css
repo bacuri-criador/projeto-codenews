@@ -7,7 +7,7 @@ body {
 .barra-superior {
     width: 100%;
     background: #1e40af;
-    padding: 15px 25px;
+    padding: 15px 0;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -46,12 +46,24 @@ body {
     text-align: center;
 }
 
+.foto-perfil {
+  width: 50px; /* Largura */
+  height: 50px; /* Altura */
+  /* Adicionar um formato de círculo */
+  border-radius: 50%;
+  overflow: visible; /* Garante que a imagem se encaixe */
+}
+
+.back-button {
+    font-size: 20px;
+    right: 0;
+}
+
+
 .foto-perfil img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
+  width: 80%;
+  height: 80%;
+  object-fit: cover; /* Recorta a imagem para preencher o espaço, sem distorcer */
 }
 
 form {
