@@ -14,7 +14,7 @@
 <body>
 
   <div class="tela-login">
-    <!-- Lado esquerdo (azul com curva branca) -->
+    <!-- Lado esquerdo -->
     <div class="lado-esquerdo"></div>
 
     <!-- Lado direito (card de login) -->
@@ -24,14 +24,18 @@
         <p class="descricao-login">Por favor, faça login para acessar o painel.</p>
 
         <form class="form-login" id="formularioLogin">
-  <div class="grupo">
-    <label for="login">E-mail</label>
-<input type="text" id="login" name="login" placeholder="admin@codenews.com" required>
-  </div>
 
   <div class="grupo">
-    <label for="senha">Senha</label>
-    <input type="password" id="senha" name="senha" placeholder="********" required>
+    <label for="email">Email</label>
+    <input id="email" type="email" placeholder="Email">
+  </div>
+  <div class="grupo">
+    <label for="senha">Senha</label>  
+    <input id="senha" type="password" placeholder="Senha">
+  
+
+
+
   </div>
 
   <div class="acoes">
@@ -42,7 +46,7 @@
     <a href="esqueci-senha.html" class="esqueceu">Esqueceu sua senha?</a>
   </div>
 
-  <button type="submit" class="botao-login">Entrar</button>
+  <button onclick="login()" class="botao-login">Entrar</button>
 </form>
 
       </div>

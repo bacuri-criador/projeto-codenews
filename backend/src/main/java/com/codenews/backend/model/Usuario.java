@@ -49,4 +49,29 @@ public class Usuario {
     public void setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
     }
+
+    private String fotoUrl;
+    public String getFotoUrl() {
+        return fotoUrl;
+    }
+
+    public void setFotoUrl(String fotoUrl) {
+        this.fotoUrl = fotoUrl;
+
+        private String fotoUrl;
+        public String getFotoUrl() {
+            return fotoUrl;
+        }
+
+        public String getFotoUrl() {
+            return fotoUrl;
+        }
+
+        public void setFotoUrl(String fotoUrl) {
+            this.fotoUrl = fotoUrl;
+        }
+
+    }
+
+
 }

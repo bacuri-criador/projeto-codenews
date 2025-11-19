@@ -1,18 +1,41 @@
-const userId = 1; // futuramente pega do login/token
-
 async function carregarPerfil() {
-    const resposta = await fetch(`http://localhost:8080/api/usuario/${userId}`);
-    const dados = await resposta.json();
+    const userId = localStorage.getItem("userId");
 
-    document.getElementById("nomeUsuario").textContent = dados.nomeCompleto;
-    document.getElementById("nomeCompleto").value = dados.nomeCompleto;
-    document.getElementById("email").value = dados.email;
-    document.getElementById("telefone").value = dados.telefone;
-    document.getElementById("fotoUrl").value = dados.fotoUrl;
+    const response = await fetch(`http://localhost:8080/perfil/${userId}`);
+    const usuario = await response.json();
 
-    if (dados.fotoUrl)
-        document.getElementById("fotoUsuario").src = dados.fotoUrl;
+    document.getElementById("nome").value = usuario.nome;
+    document.getElementById("email").value = usuario.email;
+    document.getElementById("senha").value = usuario.senha;
+    document.getElementById("fotoUrl").value = usuario.fotoUrl;async function salvarPerfil() {
+    const userId = localStorage.getItem("userId");
+
+    const dadosAtualizados = {
+        nome: document.getElementById("nome").value,
+        email: document.getElementById("email").value,
+        senha: document.getElementById("senha").value,
+        fotoUrl: document.getElementById("fotoUrl").value
+    };
+
+    const resp = await fetch(`http://localhost:8080/perfil/atualizar/${userId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dadosAtualizados)
+    });
+
+    if (resp.ok) {
+        alert("Perfil atualizado!");
+        carregarPerfil();
+    } else {
+        alert("Erro ao atualizar perfil");
+    }
 }
+
+
+    document.getElementById("fotoExibicao").src = usuario.fotoUrl;
+}
+
+
 
 document.getElementById("formPerfil").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -35,3 +58,35 @@ document.getElementById("formPerfil").addEventListener("submit", async (e) => {
 });
 
 carregarPerfil();
+
+async function carregarPerfil() {
+    const userId = localStorage.getItem("userId");
+
+    const response = await fetch(`http://localhost:8080/perfil/${userId}`);
+    const usuario = await response.json();
+
+    document.getElementById("nome").value = usuario.nome;
+    document.getElementById("email").value = usuario.email;
+    document.getElementById("senha").value = usuario.senha;
+}
+async function salvarPerfil() {
+    const userId = localStorage.getItem("userId");
+
+    const dadosAtualizados = {
+        nome: document.getElementById("nome").value,
+        email: document.getElementById("email").value,
+        senha: document.getElementById("senha").value
+    };
+
+    const response = await fetch(`http://localhost:8080/perfil/atualizar/${userId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dadosAtualizados)
+    });
+
+    if (response.ok) {
+        alert("Perfil atualizado com sucesso!");
+    } else {
+        alert("Erro ao atualizar perfil.");
+    }
+}

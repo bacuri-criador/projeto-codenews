@@ -1,29 +1,25 @@
-document.getElementById("formularioLogin").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const login = document.getElementById("email").value;  // CORRIGIDO
+async function login() {
+    const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
 
-    try {
-        const resposta = await fetch("http://localhost:5500/api/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ login, senha })  // 
-        });
+    const response = await fetch("http://localhost:8080/login", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ email, senha })
+    });
 
-        const data = await resposta.json();
-
-        if (resposta.ok && data.status === "sucesso") {
-            localStorage.setItem("token", data.token);
-            window.location.href = "pag-inicial.html";
-        } else {
-            alert("Login inválido. Verifique suas credenciais.");
-        }
-
-    } catch (erro) {
-        console.error("Erro no login:", erro);
-        alert("Erro ao conectar com o servidor.");
+    if (!response.ok) {
+        alert("Email ou senha incorretos!");
+        return;
     }
-});
+
+    const usuario = await response.json();
+
+    // salva ID e dados no navegador
+    localStorage.setItem("userId", usuario.id);
+    localStorage.setItem("nome", usuario.nome);
+    localStorage.setItem("email", usuario.email);
+
+    // redireciona após login
+    window.location.href = "pag-inicial.html";
+}
