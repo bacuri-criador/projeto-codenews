@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário - CodeNews</title>
+
+    <link rel="stylesheet" href="css/perfil.css">
+    <script src="https://kit.fontawesome.com/fe5ba7fa31.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="barra-superior">
+    <div class="logo">
+        <i class="fas fa-code"></i>
+        <span>CodeNews</span>
+    </div>
+    <a class="btn-voltar" href="dashboard.html"><i class="fas fa-arrow-left"></i> Voltar</a>
+</div>
+
+<div class="container-perfil">
+
+    <div class="card-perfil">
+
+        <div class="foto-perfil">
+            <img id="fotoUsuario" src="imagens/user.png" alt="Foto do usuário">
+        </div>
+
+        <h2 id="nomeUsuario">Carregando...</h2>
+
+        <form id="formPerfil">
+
+            <label>Nome Completo</label>
+            <input type="text" id="nomeCompleto">
+
+            <label>E-mail</label>
+            <input type="email" id="email">
+
+            <label>Telefone</label>
+            <input type="text" id="telefone">
+
+            <label>URL da Foto</label>
+            <input type="text" id="fotoUrl">
+
+            <button type="submit" class="btn-salvar">Salvar Alterações</button>
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/perfil.js"></script>
+</body>
+</html>

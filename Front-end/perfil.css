@@ -1,0 +1,82 @@
+body {
+    font-family: Poppins, sans-serif;
+    background: #f3f7ff;
+    margin: 0;
+}
+
+.barra-superior {
+    width: 100%;
+    background: #1e40af;
+    padding: 15px 25px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+.btn-voltar {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.container-perfil {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card-perfil {
+    background: white;
+    padding: 30px;
+    width: 380px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.foto-perfil img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    margin-top: 10px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #d0d7f1;
+}
+
+.btn-salvar {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    background: #1e40af;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
